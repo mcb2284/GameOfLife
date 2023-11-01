@@ -53,7 +53,9 @@ export default function Board({ play }) {
   }, [play]);
 
   return (
-    <div className={`bg-gray-400 h-fit w-fit m-20 flex flex-row`}>
+    <div
+      className={`bg-gray-300 h-fit w-fit mx-20 mt-10 flex flex-row shadow-md shadow-gray-500 p-5 rounded-lg`}
+    >
       {cells.map((row, rowIndex) => {
         return (
           <div key={rowIndex}>
