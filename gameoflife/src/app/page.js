@@ -1,9 +1,18 @@
-import Image from 'next/image'
+"use client";
+import Board from "@/app/board/Board";
+import { useState } from "react";
 
 export default function Home() {
+  const [play, setPlay] = useState(false);
+  const handleClick = () => {
+    setPlay((prevState) => !prevState);
+  };
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-
+    <main>
+      <Board play={play} />
+      <button className={"bg-blue-500 px-4 py-2"} onClick={handleClick}>
+        Play
+      </button>
     </main>
-  )
+  );
 }
